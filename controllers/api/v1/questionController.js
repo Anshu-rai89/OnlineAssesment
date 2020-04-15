@@ -27,7 +27,7 @@ module.exports.showQuestionALl= async function(req,res)
 {
     try{
 
-        let question=await Question.find({}).populate({path:'option'});
+        let question=await Question.find({}).populate({path:'options'});
         
         return res.json(200,
             {

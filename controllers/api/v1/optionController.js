@@ -11,7 +11,7 @@ module.exports.create=async function(req,res)
         {
                 
             // our id is ome more than options our question have 
-            let id=question.option.length+1;
+            let id=question.options.length+1;
             
 
             // craeting our url
@@ -25,10 +25,10 @@ module.exports.create=async function(req,res)
             );
 
             // adding option in our question option array
-            question.option.push(option);
+            question.options.push(option);
             question.save();
 
-            return res.json(200,
+            return res.json(200, 
                 {
                     message:'option created succfully',
                     data:option

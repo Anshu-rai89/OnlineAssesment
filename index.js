@@ -11,12 +11,15 @@ const passport=require('passport');
 
 
 const passportjwt=require('./config/passport-jwt');
+const cors=require('cors');
+const passportgoogle=require('./config/passport-googleoauth');
 
+// var fallback = require('express-history-api-fallback')
 
 // using middlewares
 
 app.use(express.urlencoded());
-
+app.use(cors());
 
 
 

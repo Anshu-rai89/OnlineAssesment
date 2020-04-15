@@ -18,13 +18,18 @@ module.exports.createsession = async function(req,res)
             });
     }
 
+    let userInfo={
+        _id:user._id,
+        name:user.name
+    }
 //  returning json token
     return res.json(200,
         {
            message:'Sign in find your token and keep it safe ',
            data:
            {
-               token:jwt.sign(user.toJSON(),'zcWSL8dB5WEn5k9Af5r7nHWGPOUCiARe',{expiresIn:'1000000'})
+               token:jwt.sign(user.toJSON(),'zcWSL8dB5WEn5k9Af5r7nHWGPOUCiARe',{expiresIn:'1000000'}),
+               user:userInfo
            }
         });
 } catch(err)
@@ -38,7 +43,7 @@ module.exports.createsession = async function(req,res)
 }
 
 
-// function to Rgister doctor 
+
 
 module.exports.create=async function(req,res)
 {
@@ -46,10 +51,8 @@ module.exports.create=async function(req,res)
     {
             
         console.log('inside create',req.body.email);
-       // let user=await Doctor.find({email:req.body.email});
-     //   console.log(user);
-   // if useer is already in dbn
-          console.log('craeting user');
+     
+          console.log('craeting user',req.body);
             // crating doctor in db
             let user =await User.create(req.body);
             console.log(user);
