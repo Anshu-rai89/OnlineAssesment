@@ -27,6 +27,10 @@ app.use(cors());
 // setting our routes 
 app.use('/',require('./routes'));
 
+app.get('*', function(req, res){
+     res.sendFile(path.join(__dirname, './build/index.html'))
+ })
+
 //  firing server here 
 app.listen(port,function(err)
 {

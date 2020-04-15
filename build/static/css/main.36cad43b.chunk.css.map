@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,KACE,wBAEF,CAEA,KACE,eAAe,CACf,YAGF,CAEA,oBACE,WAAW,CACX,SACF","file":"main.36cad43b.chunk.css","sourcesContent":["body {\n  background-color: #2196f3;\n  \n}\n\nform{\n  margin-top:60px;\n  padding: 20px;\n\n  \n}\n\nform button,form h5{\n  margin:20px;\n  padding: 0;\n}\n"]}
