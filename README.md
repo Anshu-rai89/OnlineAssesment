@@ -94,3 +94,6 @@ to create options for question
 ### id (to identify no of option for a question)
 
 ### question  ( store reference to question)
+
+
+# Add question along with given field and options to use
