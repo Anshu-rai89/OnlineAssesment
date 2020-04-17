@@ -2,7 +2,7 @@ const express=require('express');
 const port=9000;
 // creating express app
 const app=express();
-
+const path=require('path');
 //  requiring Database
 const db=require('./config/mongoose');
 

@@ -23,9 +23,10 @@ const questionSchema = new mongoose.Schema({
   {
       type:String
   },
-  correctOption:
+  correctAns:
   {
-      type:Number
+       type:String,
+       required:true
   }
 },{
     timestamps: true
